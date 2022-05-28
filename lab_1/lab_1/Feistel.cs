@@ -32,9 +32,11 @@ namespace lab_1
             for (int i = 0; i < rk.GetUpperBound(0)+1; i++)
             {
                 var tmp = Round_encryption(L, R, rk[i]);
-                if (i == rk.GetUpperBound(0)) 
+                if (i == rk.GetUpperBound(0))
+                {
+                    L = tmp;
                     break;
-                //Permutation(L, R);
+                }
                 L = R;
                 R = tmp;
             }
@@ -63,8 +65,10 @@ namespace lab_1
             {
                 var tmp = Round_encryption(R, L, rk[i]);
                 if (i == 0)
+                {
+                    R = tmp;
                     break;
-                //Permutation(L, R);
+                }
                 R = L;
                 L = tmp;
             }

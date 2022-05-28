@@ -52,7 +52,6 @@ namespace lab_1
             {
                 Console.WriteLine("({0}){1} = {2}", i + 1, res[i], Convert.ToString(res[i], 2));
             }
-            
         }
     }
 }
